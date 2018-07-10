@@ -16,3 +16,5 @@ if __name__ == "__main__":
     gc.collect()
     print("memory usage:", Process().memory_full_info())
 
+    print("sleeping...")
+    sleep(5)

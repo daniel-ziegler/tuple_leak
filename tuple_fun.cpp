@@ -14,13 +14,13 @@ namespace py = pybind11;
 
 // This one is fine
 void pytuple() {
-		xt::pytensor<float, 1> ones = xt::ones<float>({10});
+    xt::pytensor<float, 1> ones = xt::ones<float>({10});
     py::make_tuple(ones);
 }
 
 // This one leaks!
 void stltuple() {
-		xt::pytensor<float, 1> ones = xt::ones<float>({10});
+    xt::pytensor<float, 1> ones = xt::ones<float>({10});
     std::tuple<xt::pytensor<float, 1>> tup(ones);
 }
 
